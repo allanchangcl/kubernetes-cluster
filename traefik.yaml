@@ -2,13 +2,13 @@ serviceType: NodePort
 externalTrafficPolicy: Local
 dashboard:
   enabled: true
-  domain: traefik.umate.xyz
+  domain: traefik.mydomain.xyz # your site domain
   service:
     annotations:
       kubernetes.io/ingress.class: traefik
   auth:
     basic:
-      allanchangcl: "$apr1$A50KbAA6$YiAgdKFtNsVWKjs5oqqXZ/"
+      username: "<<your genarated htpasswd>>"
 rbac:
   enabled: true
 deployment:
