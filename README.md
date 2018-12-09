@@ -12,20 +12,28 @@ node: 2CPU/4Gb RAM/30Gb SSD and with public IP address
 
 ## Prerequisite
 Using ansible to setup will require:
+
 1) ssh access from your pc to master and node
+
 2) ansible installed in your pc
 
 Using ansible will avoid typing installation commands repeatedly when setting up.
 
 ### Edit master.yml
 Replace with your settings:
-become_user: << your username
-owner: << your username
-group: << your group
+
+become_user: << your username >>
+
+owner: << your username >>
+
+group: << your group >>
 
 Upload files to master:
+
 kube-dependencies.yml
+
 master.yml
+
 nodes.yml
 
 Run commands below:
@@ -53,7 +61,8 @@ To do so we will install Traefik, an edge router (reverse proxy, loadBalancer) u
 
 ### Install Helm
 Update the traefik.yaml which your settings. Generate htpasswd and replace 
-"<<username>>": "<<htpasswd>>". You can use any online htpasswd generator
+username: "$fdsfsdfsdfsdfsddsfsddsfsdfdsfsdfXZ/". You can use any online htpasswd generator
+
 ie:
 ```
   auth:
