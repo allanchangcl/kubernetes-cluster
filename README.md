@@ -49,7 +49,7 @@ umate    Ready    master   3d13h   v1.13.0
 ## Network Access
 We need to provide Internet Access to pods deployed in Kubernetes cluster. We have to configure the network without a loadBalancer which are normally provided by cloud hosting solutions and in this setup, we do not have a loadBalancer.
 
-To do so we will install Traefik, an edge router (reverse proxy, loadBalancer) using Helm (kubernetes packaga manager). Helm simplifies the installation comparing to using kubectl.
+To do so we will install Traefik, an edge router (reverse proxy, loadBalancer) using Helm (kubernetes package manager). Helm simplifies the installation comparing to using kubectl.
 
 ### Install Helm
 Update the traefik.yaml which your settings. Generate htpasswd and replace 
