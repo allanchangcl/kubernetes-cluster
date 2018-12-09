@@ -22,19 +22,18 @@ Using ansible will avoid typing installation commands repeatedly when setting up
 ### Edit master.yml
 Replace with your settings:
 
+```
 become_user: << your username >>
-
 owner: << your username >>
-
 group: << your group >>
+```
 
 Upload files to master:
-
+```
 kube-dependencies.yml
-
 master.yml
-
 nodes.yml
+```
 
 Run commands below:
 ```
