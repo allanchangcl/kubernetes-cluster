@@ -5,6 +5,7 @@ Virtualization Platform. One master and one node.
 
 ## VM (virtual machine) configuration
 master: 2CPU/4Gb RAM/30Gb SSD and with public IP address
+
 node: 2CPU/4Gb RAM/30Gb SSD and with public IP address
 
 **Check you are able to access your master and node from your pc with DNS setup.
