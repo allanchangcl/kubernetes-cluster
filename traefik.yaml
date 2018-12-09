@@ -1,0 +1,18 @@
+serviceType: NodePort
+externalTrafficPolicy: Local
+dashboard:
+  enabled: true
+  domain: traefik.umate.xyz
+  service:
+    annotations:
+      kubernetes.io/ingress.class: traefik
+  auth:
+    basic:
+      allanchangcl: "$apr1$A50KbAA6$YiAgdKFtNsVWKjs5oqqXZ/"
+rbac:
+  enabled: true
+deployment:
+  hostPort:
+    httpEnabled: true
+    httpsEnabled: true
+# helm install --name my-traefik --namespace kube-system --values traefik.yaml stable/traefik
