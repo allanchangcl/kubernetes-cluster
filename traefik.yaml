@@ -1,14 +1,18 @@
 serviceType: NodePort
 externalTrafficPolicy: Local
+ssl:
+  enabled: true
+  enforced: true
+  permanentRedirect: true
 dashboard:
   enabled: true
-  domain: traefik.mydomain.xyz # your site domain
+  domain: example.mydomain.xyz # your site domain
   service:
     annotations:
       kubernetes.io/ingress.class: traefik
   auth:
     basic:
-      username: "<<your genarated htpasswd>>"
+      username: $apr1$ks/R6T8d$9eqHzVLuGGTYVifFgGOSG0
 rbac:
   enabled: true
 deployment:

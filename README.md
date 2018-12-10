@@ -59,7 +59,43 @@ We need to provide Internet Access to pods deployed in Kubernetes cluster. We ha
 To do so we will install Traefik, an edge router (reverse proxy, loadBalancer) using Helm (kubernetes package manager). Helm simplifies the installation comparing to using kubectl.
 
 ### Install Helm
-Update the traefik.yaml which your settings. Generate htpasswd and replace 
+Helm is Kubernetes Package Manager. Using it to install cert-manager and treafik later.
+
+```
+sudu snap install helm --classic
+kubectl create serviceaccount tiller --namespace kube-system
+```
+
+Upload the tiller-clusterrolebinding.yaml to master. Run command below:
+```
+kubectl create serviceaccount tiller --namespace kube-system
+helm init --service-account tiller
+```
+
+Verify tillee is installed:
+```
+kubectl get pods --namespace kube-system
+```
+
+You should see :
+
+tiller-deploy-6cf89f5895-5pp4x   1/1     Running   0          17h
+
+### Install Cert Manager
+```
+helm install --name cert-manager --namespace kube-system stable/cert-manager
+```
+
+
+Setup cert-manager as a ClusterIssuer
+```
+kubectl create -f letsencrypt-prod.yaml
+
+```
+Note: use the staging config (letsencrypt-staging.yaml) when setting up. After working then delete the staging replace with production clusterissuer.
+
+### Install Traefik ingress and dashboard
+Update the traefik.yaml with  your settings. Generate htpasswd and replace 
 username: "$fdsfsdfsdfsdfsddsfsddsfsdfdsfsdfXZ/". You can use any online htpasswd generator
 
 ie:
