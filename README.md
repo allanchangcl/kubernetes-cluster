@@ -3,6 +3,8 @@
 Setting up Kubenetes on a dedicated server using Proxmox
 Virtualization Platform. One master and one node.
 
+*Use this guide if you have your own VM hosting on non cloud platforms with no loadBalancing provided. To allow cluster to be reachable from the Internet will require setup shown as follows ...*
+
 ## VM (virtual machine) configuration
 master: 2CPU/4Gb RAM/30Gb SSD and with public IP address
 
@@ -120,3 +122,8 @@ This will also setup a dashboard where you can test if everything is setup prope
 ### Screenshot
 
 ![Traefik Dashboard](traefik-dashboard.png)
+
+## Kubernetes Dashboard
+You can setup Kubernetes to manage your cluster from the Internet. May not be secure enough to prevent unauthorized access so not recommended for critical web applications.
+
+![Kubernetes Dashboard](kubernetes-dashboard.png)
