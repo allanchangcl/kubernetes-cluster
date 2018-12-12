@@ -116,3 +116,7 @@ helm install --name my-traefik --namespace kube-system --values traefik.yaml sta
 ```
 
 This will also setup a dashboard where you can test if everything is setup properly. Visit traefik.mydomain.xyz and login. 
+
+### Screenshot
+
+![Traefik Dashboard](traefik-dashboard.png)
