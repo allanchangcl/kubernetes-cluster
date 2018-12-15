@@ -124,6 +124,6 @@ This will also setup a dashboard where you can test if everything is setup prope
 ![Traefik Dashboard](traefik-dashboard.png)
 
 ## Kubernetes Dashboard
-You can setup Kubernetes to manage your cluster from the Internet. May not be secure enough to prevent unauthorized access so not recommended for critical web applications.
+You can also setup Kubernetes Dashboard to be accessible from the Internet.
 
 ![Kubernetes Dashboard](kubernetes-dashboard.png)
