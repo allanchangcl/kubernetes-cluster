@@ -127,3 +127,8 @@ This will also setup a dashboard where you can test if everything is setup prope
 You can also setup Kubernetes Dashboard to be accessible from the Internet.
 
 ![Kubernetes Dashboard](kubernetes-dashboard.png)
+
+## Kubernetes Cluster Monitoring
+Monitor your cluster performance using Prometheus and Grafana
+
+![Kubernetes Cluster Monitoring](kubernetes-prometheus-grafana.png)
